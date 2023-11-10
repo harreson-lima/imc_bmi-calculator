@@ -9,16 +9,28 @@
 </head>
 <body>
   <div class="card">
+
     <div class="form">
+
       <h1>Calcule o seu IMC para uma vida mais saudavel</h1>
-      <label for="weight">Weight</label>
-      <input name="weight" type="number">
-      <label for="height">Height</label>
-      <input name="height" type="number">
-      <button>Calcular IMC</button>
+
+      <div class="wraper">
+        <label for="height" class="mg-right">Height</label>
+        <input id="height" name="height" type="text" 
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" 
+        placeholder="1.70">
+      </div>
+      <div class="wraper">
+        <label for="weight" class="mg-right">Weight</label>
+        <input id="weight" name="weight" type="text" 
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" 
+        placeholder="70">
+      </div>
+
+      <button id="calculate-btn">Calcular IMC</button>
+
     </div>
-    <div class="image">
-    </div>
+    <p class="result"></p>
   </div>
 </body>
 </html>
