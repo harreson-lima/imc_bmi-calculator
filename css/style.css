@@ -1,17 +1,90 @@
 :root {
-  --body-bg-color1: #09203f;
-  --body-bg-color2: #537895;
-  --primary-color: #1632d1;
-  --card-bg-color: #ffffff;
+  --body-bg-color1: #ce9efa;
+  --body-bg-color2: #71b6fc;
+  --container-bg-color: #dddddd33;
+  --btn-bg-color: #323232;
+  --btn-hover-color: #222222;
+  --btn-text-color: #ffffff;
+  --shadow-color: #0c0c0c1a;
+  --text-color: #2d2d2d;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Tahoma, sans-serif;
+}
+
+body {
+  height: 100svh;
+  background-image: linear-gradient(
+    var(--body-bg-color1), 
+    var(--body-bg-color2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.container {
+  width: clamp(30%, content, 60%);
+  padding: 25px;
+  background-color: var(--container-bg-color);
+  box-shadow: 0 4px 8px 0 var(--shadow-color), 0 6px 20px 0 var(--shadow-color);
+  border-radius: 6px;
+  text-align: center;
+}
+
+h1, .wraper, button {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+.wraper {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+label {
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 input {
-  text-align: end;
-  padding: 5px 10px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  font-size: 1em;
+  text-align: center;
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  background-color: var(--btn-bg-color);
+  border: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--btn-text-color);
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover-color);
+}
+
+#result {
+  font-size: 1.3rem;
+  margin-bottom: 10px
 }
